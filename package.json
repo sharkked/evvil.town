@@ -1,4 +1,17 @@
 {
   "name": "sharkkii.dev",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "build": "eleventy",
+    "serve": "eleventy --serve"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1"
+  },
+  "dependencies": {
+    "axios": "^1.6.2"
+  },
   "packageManager": "yarn@4.0.2"
 }

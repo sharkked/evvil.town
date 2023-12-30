@@ -1,6 +1,9 @@
 module.exports = function (config) {
+  config.addPassthroughCopy({ public: "/" });
+  config.addPassthroughCopy("img");
   config.addPassthroughCopy("./src/styles");
   config.addPassthroughCopy({ static: "/" });
+
   config.addWatchTarget("./src/styles/");
 
   config.addFilter("randomItem", (arr) => {
@@ -13,7 +16,7 @@ module.exports = function (config) {
   return {
     dir: {
       input: "src",
-      output: "public",
+      output: "www",
     },
   };
 };

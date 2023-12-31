@@ -1,6 +1,13 @@
 ---
 layout: main
 ---
+
+<style>
+#crt {
+    user-select: none;
+}
+</style>
+
 <img id="crt" src="/images/trinitron.png" width="512" />
 
 [🏠 <- enter](/home)
@@ -22,7 +29,7 @@ function spring(x, v) {
     if (Math.abs(v) <= 0.01 && Math.abs(v) <= 0.01) {
         crt.style.transform = ""
     } else {
-        crt.style.transform = `translateX(${x}px)`
+        crt.style.transform = `translateX(${x}%)`
         anim = setTimeout(() => spring(x, v), 10)
     }
 }
@@ -35,7 +42,6 @@ crt.onclick = () => {
     sound.play()
 
     anim && clearTimeout(anim)
-    x = 10
-    anim = setTimeout(() => spring(10, 0), 10)
+    anim = setTimeout(() => spring(3, 0), 10)
 }
 </script>

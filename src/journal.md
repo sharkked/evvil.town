@@ -1,5 +1,6 @@
 ---
-layout: main.njk
+title: journal
+layout: main
 ---
 
 check this shit out

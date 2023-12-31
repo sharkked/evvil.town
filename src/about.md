@@ -1,5 +1,6 @@
 ---
-layout: main.njk
+title: about
+layout: main
 ---
 
 <style>

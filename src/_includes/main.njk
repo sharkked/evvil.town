@@ -2,19 +2,40 @@
 layout: _base.njk
 ---
 
+<style>
+#logo {
+  padding-right: 1rem;
+  user-select: none;
+}
+
+.social {
+  padding-left: 0.5rem;
+  line-height: 0;
+}
+</style>
 <header>
   <div id="logo">
-    <img src="" />
+    <img src="" />evvil town.
   </div>
   <nav>
-    <a href="/">home</a>
+    <a href="/home">home</a>
     <a href="/about">about</a>
     <a href="/art">art</a>
-    <a href="/posts">blog</a>
+    <a href="/journal">journal</a>
+    <a href="/links">links</a>
   </nav>
 </header>
 <main>
   {{ content | safe }}
 </main>
-<footer>@sharkkedy</footer>
-
+<footer>&copy;2023 @sharkkii
+  <a class="social" href="https://twitter.com/sharkkedy">
+    <img alt="twitter" src="/images/socials/twitter.svg" width="16" height="16" />
+  </a>
+  <a class="social" href="https://twitch.tv/sharkked">
+    <img alt="twitch" src="/images/socials/twitch.svg" width="16" height="16" />
+  </a>
+  <a class="social" href="https://github.com/sharkked">
+    <img alt="github" src="/images/socials/github.svg" width="16" height="16" />
+  </a>
+</footer>

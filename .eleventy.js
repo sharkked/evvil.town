@@ -1,10 +1,10 @@
 module.exports = function (config) {
-  config.addPassthroughCopy({ public: "/" });
-  config.addPassthroughCopy("img");
   config.addPassthroughCopy("./src/styles");
+  config.addPassthroughCopy({ assets: "/" });
   config.addPassthroughCopy({ static: "/" });
 
   config.addWatchTarget("./src/styles/");
+  config.addWatchTarget("./assets/styles/");
 
   config.addFilter("randomItem", (arr) => {
     arr.sort(() => {

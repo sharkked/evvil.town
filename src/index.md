@@ -1,5 +1,5 @@
 ---
-layout: main.njk
+layout: main
 ---
 
-🏠
+[🏠 <- enter](/home)

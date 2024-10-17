@@ -1,5 +1,5 @@
 ---
-tags: post
+tags: [post, fluff]
 title: hello again, world
 layout: post.njk
 ---

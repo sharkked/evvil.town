@@ -5,7 +5,7 @@ layout: _base.njk
 <style>
 #logo {
   padding-right: 1rem;
-  user-select: none;
+  cursor: default;
 }
 
 .social {
@@ -28,7 +28,10 @@ layout: _base.njk
 <main>
   {{ content | safe }}
 </main>
-<footer>&copy;2024 @sharkkii
+<footer>&copy;2024 @sharkk
+  <a class="social" href="https://bsky.evvil.town">
+    <img alt="bluesky" src="/images/socials/bluesky.svg" width="16" height="16" />
+  </a>
   <a class="social" href="https://twitter.com/sharkkedy">
     <img alt="twitter" src="/images/socials/twitter.svg" width="16" height="16" />
   </a>

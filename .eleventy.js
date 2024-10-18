@@ -13,6 +13,14 @@ module.exports = function (config) {
     return arr.slice(0, 1);
   });
 
+  config.addFilter("utc", (date) => date.toUTCString())
+  config.addFilter("iso", (date) => date.toISOString())
+
+  config.addFilter("excerpt", (post, len) => {
+    const content = post.replace(/(<([^>]+)>)/gi, "");
+    return content.substr(0, content.lastIndexOf(" ", 200)) + "...";
+  });
+
   return {
     dir: {
       input: "src",

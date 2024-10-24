@@ -2,6 +2,7 @@
 tags: [post, fluff]
 title: hello again, world
 layout: post.njk
+date: 2024-06-13T20:28:23Z
 ---
 
 # IT'S JUNE???

@@ -1,3 +1,5 @@
+const { feedPlugin } = require("@11ty/eleventy-plugin-rss");
+
 module.exports = function (config) {
   config.addPassthroughCopy("./src/styles");
   config.addPassthroughCopy({ assets: "/" });
@@ -19,6 +21,25 @@ module.exports = function (config) {
   config.addFilter("excerpt", (post, len) => {
     const content = post.replace(/(<([^>]+)>)/gi, "");
     return content.substr(0, content.lastIndexOf(" ", 200)) + "...";
+  });
+
+  config.addPlugin(feedPlugin, {
+    type: "atom",
+    outputPath: "/feed.xml",
+    collection: {
+      name: "post",
+      limit: 15,
+    },
+    metadata: {
+      language: "en",
+      title: "evvil.town",
+      subtitle: "the ramblings of an outdoor shut-in",
+      base: "https://evvil.town/",
+      author: {
+        name: "wren",
+        email: "",
+      }
+    }
   });
 
   return {

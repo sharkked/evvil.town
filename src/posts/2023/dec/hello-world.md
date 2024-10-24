@@ -2,6 +2,7 @@
 tags: post
 title: hello world
 layout: post.njk
+date: 2023-12-31T03:02:36Z
 ---
 
 ## what up

@@ -20,7 +20,7 @@ how the fuck do you even get started on that? answer: jump in. find a reader you
 
 (bonus points go to anything that i won't need an active subscription.)
 
-i spun the wheel and picked a random app that looked promising. in my case, i went with [lire](https://lireapp.com). yes, it's a bit of a strange commitment not to simply demo a few more free apps to see how i like them before pulling the trigger on a paid option. i can suffer a one-time 10 dollar hole in my wallet if it meets the criteria and keep me from scrolling pointless shit that makes me sad. i would have searched for foss alternatives, but this was for ios. lire offered me a dead simple and native interface that had exactly what i wanted. i've been using it for a week, and i've gotta say--it's pretty nice.
+i spun the wheel and picked a random app that looked promising. in my case, i went with [lire](https://lireapp.com). yes, it's a bit of a strange commitment not to simply demo a few more free apps to see how i like them before pulling the trigger on a paid option. i can suffer a one-time 10 dollar hole in my wallet if it meets the criteria and slows my scrolling of pointless shit that makes me sad. i would have searched for foss alternatives, but this was for ios. lire offered me a dead simple and native interface that had exactly what i wanted. i've been using it for a week, and i've gotta say--it's pretty nice.
 
 ultimately it was the draw of pulling all the text content of an article or feed into an app drew me in. i got a taste of how annoying it can be when i tried to use the native [inoreader](https://www.inoreader.com) reader, just to discover that a fuck ton of feeds offer you about 3 sentences before a "click to read more" link. if i'm reading on my phone, i don't wanna have to deal with app switching like that. i'm using inoreader as my backend for syncing and accessing my feed on desktop, but i probably will switch to a self-hosted option like [miniflux](https://miniflux.app/) at some point in the future.
 
@@ -34,7 +34,7 @@ i went through my old youtube subscriptions and picked out my top 5 or 6 most ac
 
 podcasts were another easy one. they're already just rss feeds. lire doesn't seem to play the audio files which was a little disappointing, but i could let it slide since that's not what i wanted to use it for. i have my silly little horror podcasts on my phone already, i just wanted to track when there's an update.
 
-then there's... anything else. webcomics, news feeds, blogs ([this one included!](https://evvil.town/feed.xml)), and anything else that offers a funny little xml file that updates every so often. i'm basically rebuilding how i interface with the internet from the ground up, which is scary but also fun and exciting. it's a whole new discovery process which feels somewhere between tedious and a breath of fresh air, but i think i'll stick with it and see where it takes me.
+then there's... anything else. webcomics, news feeds, blogs ([this one included!](https://evvil.town/feed.xml)), pretty much whatever, as long as it offers a funny little xml file that updates every so often. i'm basically rebuilding how i interface with the internet from the ground up, which is scary but also fun and exciting. it's a whole new discovery process which feels somewhere between tedious and a breath of fresh air, but i think i'll stick with it and see where it takes me.
 
 anyways, thanks for listening to my ted talk.
 

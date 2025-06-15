@@ -1,19 +1,19 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {%- if (title) -%}
+    <title>{{ title }} - evvil town</title>
+    {%- else -%}
+    <title>evvil town</title>
+    {%- endif -%}
     <link rel="icon" href="/favicon.ico" />
     <link rel="stylesheet" href="/styles/base.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap">
-    {%- if (title) -%}
-    <title>{{ title }} - evvil town</title>
-    {%- else -%}
-    <title>evvil town</title>
-    {%- endif -%}
   </head>
   <body>
     {{ content | safe }}

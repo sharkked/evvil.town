@@ -39,21 +39,6 @@
   --section-gap: 160px;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --color-background: var(--c-black);
-    --color-background-soft: var(--c-black-soft);
-    --color-background-mute: var(--c-black-mute);
-
-    --color-border: var(--c-divider-dark-2);
-    --color-border-hover: var(--c-divider-dark-1);
-
-    --color-heading: var(--c-text-dark-1);
-    --color-text: var(--c-text-dark-2);
-    --color-placeholder: var(--c-text-dark-3);
-  }
-}
-
 @font-face {
   font-family: 'Snavirus';
   src: url('/fonts/snavirus.regular.otf') format('opentype');

@@ -1,0 +1,130 @@
+---
+layout: _base.njk
+---
+
+<style>
+#logo {
+  padding-right: 1rem;
+  cursor: default;
+}
+
+.social {
+  padding-left: 0.5rem;
+  line-height: 0;
+}
+.card {
+  --card-primary: white;
+
+  width: 256px;
+  height: 384px;
+  color: white;
+  background-color: black;
+  border: 4px solid var(--card-primary);
+  border-radius: 0.75rem;
+  box-shadow: 0 0.5rem 2rem black;
+}
+
+.card__title {
+  padding: 0 0.5rem;
+  border-bottom: 1px solid var(--card-primary);
+}
+
+.avi {
+  width: 256px;
+  height: 256px;
+  border: 2px solid var(--border-color);
+  border-radius: 100%;
+  overflow: hidden;
+
+  & img {
+    margin: auto;
+  }
+}
+
+.page-header {
+  display: block;
+  width: 100%;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+.page-header__primary {
+  position: relative;
+  display: flex;
+  height: 8rem;
+  place-items: end;
+  justify-content: center;
+}
+
+.page-header__stamp {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.page-header__title {
+  flex: 1;
+  font-family: Snavirus;
+  line-height: 1;
+  font-size: 8rem;
+}
+
+.page-header__nav {
+  display: flex;
+  gap: 0.5rem;
+  padding: 0.5rem 0;
+  font-face: Radley;
+  font-size: 1rem;
+  border-top: 3px solid black;
+
+  & a {
+    color: black;
+  }
+}
+
+.barcode {
+  font-size: 2rem;
+  font-family: "Libre Barcode 128 Text";
+}
+
+.pink {
+  color: var(--st-c-blood);
+}
+</style>
+
+<header class="page-header">
+  <div class="page-header__primary">
+    <div class="page-header__stamp">
+      COULD YOU IMAGINE IF I HAD FUNNY BITS
+    </div>
+    <h1 class="page-header__title">e<span class="pink">vv</span>il.town <span style="color: #eaeaea;">online</span></h1>
+    <div class="barcode">never kill yourself</div>
+  </div>
+  <nav class="page-header__nav">
+    <a href="/home">HOME</a>
+    <a href="/about">ABOUT</a>
+    <a href="/art">ART</a>
+    <a href="/journal">JOURNAL</a>
+    <a href="/links">LINKS</a>
+  </nav>
+</header>
+<main>
+  {{ content | safe }}
+</main>
+<footer>&copy;{% year %} @sharkked
+  <a class="social" href="https://bsky.evvil.town">
+    <img alt="bluesky" src="/images/socials/bluesky.svg" width="16" height="16" />
+  </a>
+  <a class="social" href="https://twitter.com/sharkkedy">
+    <img alt="twitter" src="/images/socials/twitter.svg" width="16" height="16" />
+  </a>
+  <a class="social" href="https://twitch.tv/sharkked">
+    <img alt="twitch" src="/images/socials/twitch.svg" width="16" height="16" />
+  </a>
+  <a class="social" href="https://github.com/sharkked">
+    <img alt="github" src="/images/socials/github.svg" width="16" height="16" />
+  </a>
+  <a class="social" href="/feed.xml">
+    <img alt="rss/atom feed" src="/images/socials/rss.svg" width="16" height="16" />
+  </a>
+</footer>

@@ -15,6 +15,8 @@ module.exports = function (config) {
     return arr.slice(0, 1)
   })
 
+  config.addShortcode('year', () => new Date().getFullYear())
+
   config.addFilter('utc', (date) => date.toUTCString())
   config.addFilter('iso', (date) => date.toISOString())
 

@@ -5,14 +5,14 @@ layout: main
 
 <style>
 p {
+  text-align: center;
   color: var(--color-background-mute);
 }
 
-.huge {
-  color: var(--color-text);
+strong {
   font-size: 10rem;
+  color: var(--color-text);
 }
 </style>
 
-i am <span class="huge">about</span> to kill you
-
+i am <strong>about</strong> to kill you

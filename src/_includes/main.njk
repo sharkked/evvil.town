@@ -6,6 +6,9 @@ date: "git Last Modified"
 <style>
 #logo {
   padding-right: 1rem;
+  font-size: 1rem;
+  line-height: 1rem;
+  font-family: Snavirus;
   cursor: default;
 }
 
@@ -14,9 +17,10 @@ date: "git Last Modified"
   line-height: 0;
 }
 </style>
+
 <header>
   <div id="logo">
-    <img src="" />evvil town.
+    <img src="" />evvil.town
   </div>
   <nav>
     <a href="/home">home</a>
@@ -29,7 +33,7 @@ date: "git Last Modified"
 <main>
   {{ content | safe }}
 </main>
-<footer>&copy;2024 @sharkked
+<footer>&copy;{% year %} @sharkked
   <a class="social" href="https://bsky.evvil.town">
     <img alt="bluesky" src="/images/socials/bluesky.svg" width="16" height="16" />
   </a>

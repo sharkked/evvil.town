@@ -10,4 +10,4 @@ she/they/it/ur/mom/idc/go/nuts
 
 i make art n `code` n shit
 
-grow up
+never grow up

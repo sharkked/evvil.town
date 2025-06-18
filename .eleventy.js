@@ -15,10 +15,11 @@ module.exports = function (config) {
     return arr.slice(0, 1)
   })
 
-  config.addShortcode('year', () => new Date().getFullYear())
+  config.addGlobalData('built', () => new Date())
 
   config.addFilter('utc', (date) => date.toUTCString())
   config.addFilter('iso', (date) => date.toISOString())
+  config.addFilter('year', (date) => date.getFullYear())
 
   config.addFilter('excerpt', (post, len) => {
     const content = post.replace(/(<([^>]+)>)/gi, '')

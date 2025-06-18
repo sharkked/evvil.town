@@ -24,7 +24,6 @@
   --st-c-blood: #ff00a8;
 }
 
-/* semantic color variables for this project */
 :root {
   --color-background: var(--c-white);
   --color-background-soft: var(--c-white-soft);
@@ -72,10 +71,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-h1 {
-  font-family: Radley;
-}
-
 main {
   display: flex;
   flex-direction: column;
@@ -88,6 +83,15 @@ header,
 footer {
   display: flex;
   font-size: 12px;
+}
+
+footer a.social {
+  padding-left: 0.5rem;
+  line-height: 0;
+}
+
+.global-nav {
+  font-face: Radley;
 }
 
 nav {

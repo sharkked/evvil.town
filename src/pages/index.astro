@@ -1,0 +1,50 @@
+---
+import { Image } from 'astro:assets'
+import Layout from '@/layouts/BaseLayout.astro'
+import trinitronImage from '@/images/trinitron.png'
+---
+
+<Layout title="NOW ENTERING: evvil.town">
+  <main>
+    <Image id="crt" alt="An old TV that won't turn on." src={trinitronImage} width={512} />
+    <a href="/home"> 🏠 &lt;- enter </a>
+  </main>
+
+  <script>
+    var hitsounds = [
+      new Audio('/audio/hit_1.mp3'),
+      new Audio('/audio/hit_2.mp3'),
+      new Audio('/audio/hit_3.mp3'),
+      new Audio('/audio/hit_4.mp3')
+    ]
+
+    var crt = document.getElementById('crt')
+    var anim: ReturnType<typeof setTimeout>
+    crt?.addEventListener('click', () => {
+      let sound = hitsounds[Math.floor(Math.random() * hitsounds.length)]
+      sound.currentTime = 0
+      sound.play()
+
+      anim && clearTimeout(anim)
+      anim = setTimeout(() => spring(crt!, 3, 0), 10)
+    })
+
+    function spring(el: HTMLElement, x: number, v: number) {
+      v = (v - x * 0.3) * 0.8
+      x += v * 10
+
+      if (Math.abs(v) <= 0.01 && Math.abs(v) <= 0.01) {
+        el.style.transform = ''
+      } else {
+        el.style.transform = `translateX(${x}%)`
+        anim = setTimeout(() => spring(el, x, v), 10)
+      }
+    }
+  </script>
+</Layout>
+
+<style>
+  #crt {
+    user-select: none;
+  }
+</style>

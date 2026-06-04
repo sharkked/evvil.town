@@ -1,0 +1,132 @@
+---
+import { Font } from 'astro:assets'
+import BaseLayout from './BaseLayout.astro'
+import Navbar from '@/components/Navbar.astro'
+const { title } = Astro.props
+const pageTitle = title ? `${title} ~ evvil.town` : 'evvil.town'
+---
+
+<BaseLayout title={pageTitle}>
+  <Font cssVariable="--font-barcode-128-text" slot="head" />
+  <header class="page-header">
+    <div class="page-header__primary">
+      <div class="page-header__stamp">
+        AN ACCESSIBILITY NIGHTMARE &#xFF5C; COULD YOU IMAGINE IF I HAD FUNNY BITS &#xFF5C; WE WOULD
+        RULE THE WORLD &#xFF5C; AS BROTHERS. BUT IN A GIRL WAY &#xFF5C; IF ONLY THERE WERE A WORD
+        FOR THAT &#xFF5C; COULD YOU IMAGINE A WORLD WE YOU COULD BE GIRLBROTHERS &#xFF5C; BUT IN A
+        GENDERLESS SORT OF WAY. &#xFF5C COULD YOU IMAGINE LIFE AS GENDERLESS GIRLBROTHERS &#XFF5C;
+        IT WOULD PROBABLY BE A LITTLE BRIGHTER THAN THIS ONE &#xFF5C; OKAY ALRIGHT WE GET IT YOU
+        HAVE A BIG MONITOR &#xFF5C; OR I GUESS YOU JUST ZOOMED OUT REALLY FAR. THAT TOO &#xFF5C; I'M
+        NOT OBLIGATED TO ENTERTAIN YOU FURTHER.
+      </div>
+      <h1 class="page-header__title">
+        E<span class="pink">vv</span>il<span style="padding: 0 4px;">.</span><span
+          style="margin-right: -16px;">T</span
+        >own<span class="wide" style="color: #eaeaea;"> Online</span>
+      </h1>
+      <div class="barcode">never kill yourself</div>
+    </div>
+    <Navbar class="global-nav" />
+  </header>
+
+  <main>
+    <slot />
+  </main>
+</BaseLayout>
+
+<style>
+  #logo {
+    padding-right: 1rem;
+    cursor: default;
+  }
+
+  .avi {
+    width: 256px;
+    height: 256px;
+    border: 2px solid var(--border-color);
+    border-radius: 100%;
+    overflow: hidden;
+
+    & img {
+      margin: auto;
+    }
+  }
+
+  .page-header {
+    display: block;
+    width: 100%;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+  }
+
+  .page-header__primary {
+    position: relative;
+    display: flex;
+    height: 8rem;
+    place-items: end;
+    justify-content: center;
+  }
+
+  .page-header__stamp {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+
+  .page-header__title {
+    flex: 1;
+    font-family: var(--font-snavirus);
+    font-size: 8rem;
+    line-height: 1;
+  }
+
+  .page-header :global(nav) {
+    gap: 0.5rem;
+    padding: 0.5rem 0;
+    font-size: 1rem;
+    border-top: 3px solid black;
+    text-transform: uppercase;
+
+    a[data-active='false'] {
+      color: black;
+    }
+  }
+
+  .barcode {
+    font-family: var(--font-barcode-128-text);
+    font-size: 2rem;
+  }
+
+  @media (max-width: 964px) {
+    .barcode {
+      font-size: 1.5rem;
+    }
+
+    .page-header__title span:last-of-type {
+      display: none !important;
+    }
+  }
+
+  @media (max-width: 672px) {
+    .page-header__title span:last-of-type {
+      display: none !important;
+    }
+  }
+
+  .pink {
+    color: var(--st-c-blood);
+  }
+
+  .note {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: black;
+    font: var(--font-im-fell-dw-pica);
+    line-height: 1.12rem;
+  }
+</style>

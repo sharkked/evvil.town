@@ -1,0 +1,48 @@
+---
+import Layout from '@/layouts/MainLayout.astro'
+import underConstruction from '@/images/under-construction.gif'
+---
+
+<Layout title="art">
+  <div class="gallery">
+    {
+      Array.from({ length: 1000 }, (i) => (
+        <div class="thumbnail">
+          <img src="https://v" aria-hidden={true} />
+        </div>
+      ))
+    }
+    <div class="thumbnail" title="i'm sorry.">
+      <img alt="i'm sorry." src={underConstruction.src} />
+    </div>
+    <div class="thumbnail">
+      <img src="https://v" aria-hidden={true} />
+    </div>
+  </div>
+</Layout>
+
+<style>
+  .gallery {
+    padding: 1rem;
+    display: grid;
+    flex: 1;
+    gap: 4px;
+    width: 100%;
+    max-width: 640px;
+    grid-template-columns: auto auto auto;
+  }
+
+  .gallery .thumbnail {
+    position: relative;
+    display: flex;
+    margin: auto;
+    height: 200px;
+    width: 200px;
+    border: 1px solid black;
+  }
+
+  .gallery .thumbnail img {
+    display: block;
+    margin: auto;
+  }
+</style>

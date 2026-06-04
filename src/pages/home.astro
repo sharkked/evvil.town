@@ -1,0 +1,113 @@
+---
+import Layout from '@/layouts/MainLayout.astro'
+import notepadImg from '@/images/notebook.webp'
+---
+
+<Layout title="home ~ evvil.town">
+  <main>
+    <div class="note" style="transform: rotate(4deg)">
+      <img alt="" src={notepadImg.src} />
+      <span>whats up</span>
+      <span>call me sara, or wren. idc</span>
+      <span>she/they/it (if ur cool)</span>
+      <span>i make art n code n shit</span>
+      <span>like this site.</span>
+      <span>but not that often.</span>
+      <span><br /></span>
+      <span>that's okay though</span>
+      <span>it is still here</span>
+      <span><br /></span>
+      <span>never grow up</span>
+    </div>
+  </main>
+</Layout>
+
+<style>
+  #logo {
+    padding-right: 1rem;
+    cursor: default;
+  }
+
+  .avi {
+    width: 256px;
+    height: 256px;
+    border: 2px solid var(--border-color);
+    border-radius: 100%;
+    overflow: hidden;
+
+    & img {
+      margin: auto;
+    }
+  }
+
+  .page-header {
+    display: block;
+    width: 100%;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+  }
+
+  .page-header__primary {
+    position: relative;
+    display: flex;
+    height: 8rem;
+    place-items: end;
+    justify-content: center;
+  }
+
+  .page-header__stamp {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .page-header__title {
+    flex: 1;
+    font-family: var(--font-snavirus);
+    font-size: 8rem;
+    line-height: 1;
+  }
+
+  .page-header .global-nav {
+    gap: 0.5rem;
+    padding: 0.5rem 0;
+    font-size: 1rem;
+    border-top: 3px solid black;
+
+    & a {
+      color: black;
+    }
+  }
+
+  .barcode {
+    font-family: var(--font-barcode-128-text);
+    font-size: 2rem;
+  }
+
+  .pink {
+    color: var(--st-c-blood);
+  }
+
+  .note {
+    position: relative;
+    display: flex;
+    margin-top: -60px;
+    flex-direction: column;
+    align-items: center;
+    color: black;
+    font: var(--font-im-fell-dw-pica);
+    line-height: 1.12rem;
+
+    img {
+      position: absolute;
+      top: -87.9px;
+      width: 300px;
+      image-rendering: pixelated;
+      filter: brightness(0.8) contrast(1.5) sepia(1) hue-rotate(-65deg)
+        drop-shadow(0 1px 10px #0002);
+
+      pointer-events: none;
+      user-select: none;
+    }
+  }
+</style>

@@ -1,0 +1,134 @@
+:root {
+  --c-white: #fefaf9;
+  --c-white-soft: #f8f8f8;
+  --c-white-mute: #f2f2f2;
+
+  --c-black: #181818;
+  --c-black-soft: #222222;
+  --c-black-mute: #282828;
+
+  --c-brown: #2a2a2a;
+
+  --c-divider-light-1: rgba(60, 60, 60, 0.29);
+  --c-divider-light-2: rgba(60, 60, 60, 0.12);
+  --c-divider-dark-1: rgba(84, 84, 84, 0.65);
+  --c-divider-dark-2: rgba(84, 84, 84, 0.48);
+
+  --c-text-light-1: var(--c-brown);
+  --c-text-light-2: rgba(60, 60, 60, 0.66);
+  --c-text-light-2: rgba(60, 60, 60, 0.36);
+  --c-text-dark-1: var(--c-white);
+  --c-text-dark-2: rgba(235, 235, 235, 0.64);
+  --c-text-dark-3: rgba(235, 235, 235, 0.34);
+
+  --st-c-blood: #ff00a8;
+}
+
+:root {
+  --color-background: var(--c-white);
+  --color-background-soft: var(--c-white-soft);
+  --color-background-mute: var(--c-white-mute);
+
+  --color-border: var(--c-divider-light-2);
+  --color-border-hover: var(--c-divider-light-1);
+
+  --color-heading: var(--c-text-light-1);
+  --color-text: var(--c-text-light-1);
+
+  --section-gap: 160px;
+}
+
+*,
+*::before,
+*::after {
+  position: relative;
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 2rem;
+  line-height: 1.6;
+  font-family: var(--font-eb-garamond), serif;
+  font-size: 1rem;
+  font-weight: normal;
+  color: var(--color-text);
+  background: var(--color-background);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+}
+
+header,
+footer {
+  display: flex;
+  font-size: 12px;
+}
+
+footer a.social {
+  padding-left: 0.5rem;
+  line-height: 0;
+}
+
+.global-nav {
+  font-family: var(--font-radley);
+}
+
+nav {
+  display: flex;
+
+  & a {
+    display: inline-block;
+    height: fit-content;
+    padding: 0 1rem;
+
+    &:hover {
+      background-color: hsla(320, 100%, 37%, 0.2);
+    }
+
+    &:first-of-type {
+      border: 0;
+    }
+  }
+}
+
+a {
+  color: var(--st-c-blood);
+  text-decoration: none;
+  transition:
+    color 0.4s,
+    background-color 0.4s;
+}
+
+.post-list li {
+  list-style-type: none;
+}
+
+code {
+  font: unset;
+}
+
+code:before {
+  content: '';
+  position: absolute;
+  left: -2px;
+  top: -2px;
+  right: -2px;
+  bottom: -2px;
+  z-index: -1;
+  background-color: var(--color-background-soft);
+  border: 1px solid var(--color-border);
+  border-radius: 2px;
+}

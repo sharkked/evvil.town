@@ -1,0 +1,20 @@
+---
+const pathname = new URL(Astro.request.url).pathname
+const routes = [
+  { label: 'home', path: '/home' },
+  { label: 'about', path: '/about' },
+  { label: 'art', path: '/art' },
+  { label: 'journal', path: '/journal' },
+  { label: 'links', path: '/links' }
+]
+---
+
+<nav class="global-nav">
+  {
+    routes.map((route) => (
+      <a data-active={pathname === route.path} href={route.path}>
+        {route.label}
+      </a>
+    ))
+  }
+</nav>

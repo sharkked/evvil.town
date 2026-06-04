@@ -6,10 +6,13 @@ import PostHeader from "@/components/PostHeader.astro";
 const publishedBlogEntries = await getCollection("blog", ({ data }) => {
     return data.draft !== true;
 });
+publishedBlogEntries.sort(
+    (a, b) => b.data.date.getTime() - a.data.date.getTime(),
+);
 ---
 
 <Layout title="journal">
-    <PostHeader title="journal" date={new Date()} />
+    <PostHeader title="journal" date={publishedBlogEntries[0].data.date} />
     <article>
         <p>
             if you wanna read my ramblings, i post once in a blue moon.<a
@@ -31,25 +34,21 @@ const publishedBlogEntries = await getCollection("blog", ({ data }) => {
         </p>
         <ul>
             {
-                publishedBlogEntries
-                    .toSorted(
-                        (a, b) => b.data.date.getTime() - a.data.date.getTime(),
-                    )
-                    .map((post) => (
-                        <li>
-                            <a href={"/journal/posts/" + post.id}>
-                                {post.data.title}
-                            </a>
-                            <br />
-                            <span style="opacity: 0.5">
-                                @ {post.data.date}
-                                <br />~
-                            </span>
-                            {post.body
-                                ?.slice(0, 280)
-                                .replace(/\.?\s*\w*\s*$/, "...")}
-                        </li>
-                    ))
+                publishedBlogEntries.map((post) => (
+                    <li>
+                        <a href={"/journal/posts/" + post.id}>
+                            {post.data.title}
+                        </a>
+                        <br />
+                        <span style="opacity: 0.5">
+                            @ {post.data.date}
+                            <br />~
+                        </span>
+                        {post.body
+                            ?.slice(0, 280)
+                            .replace(/\.?\s*\w*\s*$/, "...")}
+                    </li>
+                ))
             }
         </ul>
 

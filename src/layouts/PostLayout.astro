@@ -1,57 +1,36 @@
 ---
-import Layout from './BaseLayout.astro'
-import Navbar from '@/components/Navbar.astro'
-const { title, date } = Astro.props
-console.log(Astro.props)
+import Layout from "./BaseLayout.astro";
+import Navbar from "@/components/Navbar.astro";
+const { title, date } = Astro.props;
+console.log(Astro.props);
 ---
 
 <Layout title={`${title} ~ evvil.town`}>
-  <header>
-    <div id="logo">
-      <img src="" />evvil.town
-    </div>
-    <Navbar />
-  </header>
+    <header>
+        <div id="logo">
+            <img src="" />evvil.town
+        </div>
+        <Navbar />
+    </header>
 
-  <main>
-    <article>
-      <slot />
-    </article>
-  </main>
+    <main>
+        <slot />
+    </main>
 </Layout>
 
 <style>
-  #logo {
-    padding-right: 1rem;
-    font-size: 1rem;
-    line-height: 1rem;
-    font-family: var(--font-snavirus);
-    cursor: default;
-  }
-
-  main {
-    max-width: 1000px;
-    margin: auto;
-    justify-content: start;
-    font-size: 1rem;
-  }
-
-  article {
-    width: 100%;
-  }
-
-  .post-content {
-    flex: 1;
-    font-family: 'Source Sans 3', sans-serif;
-
-    &p {
-      line-height: 1.5rem;
-      padding: 0.5rem 0;
+    #logo {
+        padding-right: 1rem;
+        font-size: 1rem;
+        line-height: 1rem;
+        font-family: var(--font-snavirus);
+        cursor: default;
     }
 
-    &img {
-      display: block;
-      margin: auto;
+    main {
+        max-width: 1000px;
+        margin: auto;
+        justify-content: start;
+        font-size: 1rem;
     }
-  }
 </style>

@@ -1,0 +1,14 @@
+root = true
+
+[*]
+indent_style = space
+charset = utf-8
+trim_trailing_whitespace = true
+insert_final_newline = true
+
+[*.astro]
+typescript.format.semicolons = remove
+
+
+[*.md]
+trim_trailing_whitespace = false

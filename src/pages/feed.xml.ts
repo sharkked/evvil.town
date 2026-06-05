@@ -38,5 +38,7 @@ export async function GET(context: APIContext) {
     })
   })
 
-  return new Response(feed.atom1(), { headers: { 'Content-Type': 'application/xml' } })
+  return new Response(feed.atom1(), {
+    headers: { 'Content-Type': 'application/xml' }
+  })
 }

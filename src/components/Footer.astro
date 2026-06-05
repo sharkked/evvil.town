@@ -1,72 +1,78 @@
 ---
-import "../styles/global.css";
-import BskyLogo from "../images/socials/bluesky.svg";
-import GithubLogo from "../images/socials/github.svg";
-import TwitchLogo from "../images/socials/twitch.svg";
-import TwitterLogo from "../images/socials/twitter.svg";
-import RssIcon from "../images/socials/rss.svg";
-const year = new Date().getUTCFullYear();
+import { Image } from 'astro:assets'
+import '../styles/global.css'
+import BskyLogo from '../images/socials/bluesky.svg'
+import GithubLogo from '../images/socials/github.svg'
+import TwitchLogo from '../images/socials/twitch.svg'
+import TwitterLogo from '../images/socials/twitter.svg'
+import RssIcon from '../images/socials/rss.svg'
+const year = new Date().getUTCFullYear()
 ---
 
 <footer>
-    &copy;{year} - wren -
-    <a class="social" aria-label="bluesky" href="https://bsky.evvil.town">
-        <BskyLogo width={16} height={16} />
-    </a>
-    <a class="social" aria-label="twitter" href="https://twitter.com/sharkkedy">
-        <TwitterLogo width={16} height={16} />
-    </a>
-    <a class="social" aria-label="twitch" href="https://twitch.tv/sharkked">
-        <TwitchLogo width={16} height={16} />
-    </a>
-    <a
-        class="social"
-        aria-label="github"
-        href="https://github.com/sharkked/evvil.town"
-    >
-        <GithubLogo width={16} height={16} />
-    </a>
-    <a class="social" aria-label="rss/atom feed" href="/feed.xml">
-        <RssIcon width={16} height={16} />
-    </a>
-    <span class="spacer"></span>
-    <span>written, not hallucinated - <a href="/changelog"> changelog</a></span>
-    <a href="https://evvil.town" class="blinkie">
-        <img src="https://evvil.town/images/evviltown.gif" />
-    </a>
+  &copy;{year} - wren -
+  <a class="social" aria-label="bluesky" href="https://bsky.evvil.town">
+    <BskyLogo width={16} height={16} />
+  </a>
+  <a class="social" aria-label="twitter" href="https://twitter.com/sharkkedy">
+    <TwitterLogo width={16} height={16} />
+  </a>
+  <a class="social" aria-label="twitch" href="https://twitch.tv/sharkked">
+    <TwitchLogo width={16} height={16} />
+  </a>
+  <a
+    class="social"
+    aria-label="github"
+    href="https://github.com/sharkked/evvil.town"
+  >
+    <GithubLogo width={16} height={16} />
+  </a>
+  <a class="social" aria-label="rss/atom feed" href="/feed.xml">
+    <RssIcon width={16} height={16} />
+  </a>
+  <span class="spacer"></span>
+  <span>written, not hallucinated - <a href="/changelog"> changelog</a></span>
+  <a href="https://evvil.town" class="blinkie">
+    <Image
+      src="https://evvil.town/images/evviltown.gif"
+      alt="evvil.town"
+      width="88"
+      height="31"
+    />
+  </a>
 </footer>
 
 <script>
-    document.addEventListener("DOMContentLoaded", () => {
-        const twitterEl = document.querySelector('footer > a[href*="twitter"]');
-        twitterEl?.addEventListener("click", (e) => {
-            e.preventDefault();
-            twitterEl.remove();
-        });
+  document.addEventListener('DOMContentLoaded', () => {
+    const twitterEl = document.querySelector('footer > a[href*="twitter"]')
+    twitterEl?.addEventListener('click', (e) => {
+      e.preventDefault()
+      twitterEl.remove()
+    })
 
-        const blinkieEl = document.querySelector("footer > a.blinkie");
-        blinkieEl?.addEventListener("click", (e) => {
-            e.preventDefault();
-        });
-    });
+    const blinkieEl = document.querySelector('footer > a.blinkie')
+    blinkieEl?.addEventListener('click', (e) => {
+      e.preventDefault()
+    })
+  })
 </script>
 
 <style>
-    footer {
-        border-top: 1px solid black;
-        padding-top: 8px;
+  footer {
+    border-top: 1px solid black;
+    padding-top: 8px;
 
-        .spacer {
-            flex: 1;
-        }
-
-        .blinkie {
-            position: relative;
-            width: 88px;
-            margin-left: 12px;
-            img {
-                position: absolute;
-            }
-        }
+    .spacer {
+      flex: 1;
     }
+
+    .blinkie {
+      position: relative;
+      width: 88px;
+      margin-left: 12px;
+      img {
+        position: absolute;
+      }
+    }
+  }
 </style>

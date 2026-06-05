@@ -30,14 +30,23 @@ const year = new Date().getUTCFullYear();
         <RssIcon width={16} height={16} />
     </a>
     <span class="spacer"></span>
-    <a href="/changelog">changelog</a>
+    <span>written, not hallucinated - <a href="/changelog"> changelog</a></span>
+    <a href="https://evvil.town" class="blinkie">
+        <img src="https://evvil.town/images/evviltown.gif" />
+    </a>
 </footer>
+
 <script>
     document.addEventListener("DOMContentLoaded", () => {
-        const el = document.querySelector('footer > a[href*="twitter"]');
-        el?.addEventListener("click", (e) => {
+        const twitterEl = document.querySelector('footer > a[href*="twitter"]');
+        twitterEl?.addEventListener("click", (e) => {
             e.preventDefault();
-            el.remove();
+            twitterEl.remove();
+        });
+
+        const blinkieEl = document.querySelector("footer > a.blinkie");
+        blinkieEl?.addEventListener("click", (e) => {
+            e.preventDefault();
         });
     });
 </script>
@@ -49,6 +58,15 @@ const year = new Date().getUTCFullYear();
 
         .spacer {
             flex: 1;
+        }
+
+        .blinkie {
+            position: relative;
+            width: 88px;
+            margin-left: 12px;
+            img {
+                position: absolute;
+            }
         }
     }
 </style>

@@ -1,13 +1,30 @@
 ---
-import { Font } from 'astro:assets'
+import { Font, Image } from 'astro:assets'
 import BaseLayout from './BaseLayout.astro'
 import Navbar from '@/components/Navbar.astro'
+import logoLight from '@/images/logo_light.png'
+import logoDark from '@/images/logo_dark.png'
 const { title } = Astro.props
 const pageTitle = title ? `${title} ~ evvil.town` : 'evvil.town'
 ---
 
 <BaseLayout title={pageTitle}>
   <Font cssVariable="--font-barcode-128-text" slot="head" />
+  <link
+    rel="preload"
+    as="img"
+    href={logoLight.src}
+    fetchpriority="high"
+    slot="head"
+  />
+  <link
+    rel="preload"
+    as="img"
+    href={logoDark.src}
+    fetchpriority="high"
+    slot="head"
+  />
+
   <header class="page-header">
     <div class="page-header__primary">
       <div class="page-header__stamp">
@@ -21,7 +38,17 @@ const pageTitle = title ? `${title} ~ evvil.town` : 'evvil.town'
         GUESS YOU JUST ZOOMED OUT REALLY FAR. THAT TOO &#xFF5C; I'M NOT
         OBLIGATED TO ENTERTAIN YOU FURTHER.
       </div>
-      <img class="page-header__logo" src="/images/logo.png" alt="evvil.town" />
+      <Image
+        class="page-header__logo"
+        src={logoLight}
+        alt="evvil.town"
+        height={50}
+        width={228}
+        quality={100}
+        format="png"
+        loading="eager"
+        fetchpriority="high"
+      />
       <span class="spacer"></span>
       <div class="barcode">never kill yourself</div>
     </div>
@@ -77,6 +104,7 @@ const pageTitle = title ? `${title} ~ evvil.town` : 'evvil.town'
 
   .page-header__logo {
     image-rendering: pixelated;
+    width: 456px;
     height: 100px;
     margin: 0.5rem;
   }

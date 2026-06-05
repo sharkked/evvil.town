@@ -1,44 +1,50 @@
 ---
-import '../styles/global.css'
-import BskyLogo from '../images/socials/bluesky.svg'
-import GithubLogo from '../images/socials/github.svg'
-import TwitchLogo from '../images/socials/twitch.svg'
-import TwitterLogo from '../images/socials/twitter.svg'
-import RssIcon from '../images/socials/rss.svg'
-const year = new Date().getUTCFullYear()
+import "../styles/global.css";
+import BskyLogo from "../images/socials/bluesky.svg";
+import GithubLogo from "../images/socials/github.svg";
+import TwitchLogo from "../images/socials/twitch.svg";
+import TwitterLogo from "../images/socials/twitter.svg";
+import RssIcon from "../images/socials/rss.svg";
+const year = new Date().getUTCFullYear();
 ---
 
 <footer>
-  &copy;{year} - wren -
-  <a class="social" aria-label="bluesky" href="https://bsky.evvil.town">
-    <BskyLogo width={16} height={16} />
-  </a>
-  <a class="social" aria-label="twitter" href="https://twitter.com/sharkkedy">
-    <TwitterLogo width={16} height={16} />
-  </a>
-  <a class="social" aria-label="twitch" href="https://twitch.tv/sharkked">
-    <TwitchLogo width={16} height={16} />
-  </a>
-  <a class="social" aria-label="github" href="https://github.com/sharkked">
-    <GithubLogo width={16} height={16} />
-  </a>
-  <a class="social" aria-label="rss/atom feed" href="/feed.xml">
-    <RssIcon width={16} height={16} />
-  </a>
+    &copy;{year} - wren -
+    <a class="social" aria-label="bluesky" href="https://bsky.evvil.town">
+        <BskyLogo width={16} height={16} />
+    </a>
+    <a class="social" aria-label="twitter" href="https://twitter.com/sharkkedy">
+        <TwitterLogo width={16} height={16} />
+    </a>
+    <a class="social" aria-label="twitch" href="https://twitch.tv/sharkked">
+        <TwitchLogo width={16} height={16} />
+    </a>
+    <a class="social" aria-label="github" href="https://github.com/sharkked">
+        <GithubLogo width={16} height={16} />
+    </a>
+    <a class="social" aria-label="rss/atom feed" href="/feed.xml">
+        <RssIcon width={16} height={16} />
+    </a>
+    <span class="spacer"></span>
+    <a href="/changelog">changelog</a>
 </footer>
 <script>
-  document.addEventListener('DOMContentLoaded', () => {
-    const el = document.querySelector('footer > a[href*="twitter"]')
-    el?.addEventListener('click', (e) => {
-      e.preventDefault()
-      el.remove()
-    })
-  })
+    document.addEventListener("DOMContentLoaded", () => {
+        const el = document.querySelector('footer > a[href*="twitter"]');
+        el?.addEventListener("click", (e) => {
+            e.preventDefault();
+            el.remove();
+        });
+    });
 </script>
 
 <style>
-  footer {
-    border-top: 1px solid black;
-    padding-top: 8px;
-  }
+    footer {
+        border-top: 1px solid black;
+        padding-top: 8px;
+
+        .spacer {
+            flex: 1;
+        }
+    }
 </style>

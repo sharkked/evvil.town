@@ -1,0 +1,16 @@
+---
+import { Image } from 'astro:assets'
+const { src, href, alt } = Astro.props
+---
+
+<a href={href} class="blinkie">
+  <Image src={src} alt={alt} width="88" height="31" />
+</a>
+
+<style>
+  .blinkie {
+    width: 88px;
+    height: 31px;
+    image-rendering: pixelated;
+  }
+</style>

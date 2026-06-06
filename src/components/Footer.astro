@@ -6,6 +6,7 @@ import GithubLogo from '../images/socials/github.svg'
 import TwitchLogo from '../images/socials/twitch.svg'
 import TwitterLogo from '../images/socials/twitter.svg'
 import RssIcon from '../images/socials/rss.svg'
+import Blinkie from './Blinkie.astro'
 const year = new Date().getUTCFullYear()
 ---
 
@@ -32,14 +33,11 @@ const year = new Date().getUTCFullYear()
   </a>
   <span class="spacer"></span>
   <span>written, not hallucinated - <a href="/changelog"> changelog</a></span>
-  <a href="https://evvil.town" class="blinkie">
-    <Image
-      src="https://evvil.town/images/evviltown.gif"
-      alt="evvil.town"
-      width="88"
-      height="31"
-    />
-  </a>
+  <Blinkie
+    src="https://evvil.town/images/evviltown.gif"
+    href="https://evvil.town"
+    alt="evvil.town"
+  />
 </footer>
 
 <script>

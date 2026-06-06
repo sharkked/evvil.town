@@ -1,5 +1,29 @@
 ---
 import Layout from '@/layouts/MainLayout.astro'
+import Blinkie from '@/components/Blinkie.astro'
+
+const blinkies = new Array(16).fill({
+  src: 'https://evvil.town/images/evviltown.gif',
+  href: 'https://evvil.town',
+  alt: 'evvil.town'
+})
 ---
 
-<Layout title="links"><span>⛓️</span></Layout>
+<Layout title="links">
+  <div class="grid">
+    {
+      blinkies.map((blinkie) => (
+        <Blinkie src={blinkie.src} href={blinkie.href} alt={blinkie.alt} />
+      ))
+    }
+  </div>
+</Layout>
+
+<style>
+  .grid {
+    margin: 1rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 4px;
+  }
+</style>
